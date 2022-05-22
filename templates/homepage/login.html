@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <p>
+        <label>Tai khoan :</label>{{form.username}}
+    </p>
+    <p>
+        <label>Mat khau :</label>{{form.password}}
+    </p>
+    <input type="hidden", name="next" value="/"/>
+    <input type="submit" value="dang nhap"/>
+</form>
+</body>
+</html>
